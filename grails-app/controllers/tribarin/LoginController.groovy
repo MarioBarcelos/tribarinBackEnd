@@ -1,15 +1,15 @@
-package vendas
+package tribarin
 
 import com.maspim.JWTService
 import com.maspim.Usuario
 import grails.converters.JSON
 import org.springframework.http.HttpStatus
 
-class AuthController {
-
+class LoginController {
+    static namespace = "api/login"
     JWTService jwtService
 
-    def authLogin = {
+    def auth = {
         def bodyRequest = request.JSON
 
         if (!bodyRequest?.username) {

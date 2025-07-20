@@ -928,5 +928,155 @@ Caused by: java.lang.IllegalStateException: Previous attempts to find a Docker e
 2025-02-21 02:20:57,277  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
 2025-02-21 02:20:57,577  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
 2025-02-21 02:20:57,764  WARN [org.grails.config.NavigableMap] Accessing config key '[serverURL]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
-2025-02-21 02:20:58,933  INFO [vendas.AtendimentoController] Iniciando validação de novo Usuário
-2025-02-21 02:20:58,948 ERROR [vendas.AtendimentoController] Concluindo validação, resultado: Por favor, verifique suas informações de Acesso e tente novamente
+2025-02-21 02:20:58,933  INFO [tribarin.AtendimentoController] Iniciando validação de novo Usuário
+2025-02-21 02:20:58,948 ERROR [tribarin.AtendimentoController] Concluindo validação, resultado: Por favor, verifique suas informações de Acesso e tente novamente
+2025-07-19 20:18:16,063  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:18:16,069  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:18:16,069  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:18:16,400  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:18:16,460  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:18:16,750  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:18:16,916  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:18:16,916  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:18:16,916  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:18:16,957  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:18:16,961  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:18:16,985  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:18:17,120  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:18:17,121  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:18:17,121  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:18:17,162  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:18:17,166  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:18:17,190  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:18:17,320  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:18:17,320  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:18:17,320  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:18:17,355  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:18:17,359  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:18:17,383  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:18:17,516  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:18:17,517  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:18:17,517  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:18:17,560  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:18:17,563  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:18:17,587  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:22:29,362  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:22:29,362  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:22:29,362  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:22:29,681  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:22:29,728  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:22:30,000  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:22:30,156  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:22:30,156  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:22:30,156  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:22:30,187  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:22:30,204  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:22:30,220  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:22:30,356  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:22:30,356  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:22:30,356  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:22:30,387  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:22:30,387  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:22:30,423  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:22:30,537  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:22:30,537  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:22:30,537  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:22:30,578  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:22:30,585  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:22:30,600  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:22:30,724  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:22:30,724  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:22:30,724  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:22:30,784  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:22:30,791  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:22:30,802  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:42:46,294  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:42:46,294  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:42:46,294  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:42:46,626  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:42:46,674  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:42:46,959  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:42:47,116  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:42:47,116  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:42:47,116  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:42:47,149  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:42:47,149  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:42:47,180  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:42:47,313  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:42:47,313  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:42:47,313  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:42:47,344  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:42:47,344  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:42:47,376  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:42:47,515  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:42:47,515  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:42:47,515  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:42:47,545  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:42:47,545  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:42:47,561  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:42:47,694  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:42:47,694  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:42:47,694  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:42:47,741  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:42:47,741  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:42:47,757  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:50:43,130  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:50:43,130  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:50:43,130  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:50:43,465  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:50:43,529  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:50:43,836  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:50:43,983  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:50:43,983  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:50:43,983  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:50:44,032  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:50:44,047  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:50:44,062  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:50:44,222  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:50:44,222  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:50:44,222  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:50:44,260  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:50:44,262  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:50:44,276  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:50:44,407  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:50:44,407  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:50:44,423  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:50:44,455  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:50:44,455  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:50:44,471  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 20:50:44,611  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 20:50:44,611  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 20:50:44,611  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 20:50:44,642  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 20:50:44,657  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 20:50:44,679  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 21:24:50,610  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 21:24:50,610  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 21:24:50,610  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 21:24:50,959  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 21:24:51,015  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 21:24:51,306  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 21:24:51,488  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 21:24:51,488  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 21:24:51,488  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 21:24:51,535  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 21:24:51,535  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 21:24:51,571  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 21:24:51,700  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 21:24:51,700  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 21:24:51,700  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 21:24:51,731  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 21:24:51,747  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 21:24:51,763  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 21:24:51,904  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 21:24:51,904  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 21:24:51,904  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 21:24:51,936  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 21:24:51,936  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 21:24:51,968  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered
+2025-07-19 21:24:52,100  INFO [grails.plugins.DefaultGrailsPluginManager] Attempting to load [0] user defined plugins
+2025-07-19 21:24:52,100  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [core] with version [6.2.3] loaded successfully
+2025-07-19 21:24:52,100  INFO [grails.plugins.DefaultGrailsPluginManager] Grails plug-in [eventBus] with version [5.0.2] loaded successfully
+2025-07-19 21:24:52,132  WARN [grails.events.bus.EventBusBuilder] No event bus implementations found on classpath, using synchronous implementation.
+2025-07-19 21:24:52,132  WARN [org.grails.config.NavigableMap] Accessing config key '[dataSources]' through dot notation is deprecated, and it will be removed in a future release. Use 'config.getProperty(key, targetClass)' instead.
+2025-07-19 21:24:52,163  WARN [org.grails.datastore.mapping.core.DatastoreUtils] Cannot unbind session, there's no SessionHolder registered

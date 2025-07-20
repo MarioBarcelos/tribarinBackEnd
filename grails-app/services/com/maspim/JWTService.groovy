@@ -8,25 +8,24 @@ import com.auth0.jwt.interfaces.DecodedJWT
 import grails.util.Holders
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
+import org.springframework.stereotype.Service
 
-import javax.servlet.http.HttpServlet
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
+import org.grails.web.servlet.mvc.GrailsWebRequest
+import org.springframework.web.context.request.RequestContextHolder
 
 @Transactional
+@Service
 class JWTService {
 
     private Algorithm ALGORITHM
-    private long JWT_EXPIRATION
+    long JWT_EXPIRATION // Removido 'private' pois é acessado externamente
     private String _claimKey
-    private String _currentToken
-    private HttpServletRequest _request
-    private HttpServletResponse _response
+    // Removido _currentToken, _request, _response pois são acessados via RequestContextHolder
+    // ou são variáveis de escopo da requisição/método.
 
-    JWTService(HttpServlet request, HttpServlet response) {
-        _request = request
-        _response = response
-        _currentToken = ''
+    JWTService() { // Construtor sem parâmetros para facilitar a injeção do Spring
         _claimKey = 'principal'
         JWT_EXPIRATION = Holders.config.getProperty('jwt.expiration', Long, 1800000L)
         ALGORITHM = Algorithm.HMAC256("${Holders.config.getProperty('jwt.secret')}")
@@ -44,34 +43,25 @@ class JWTService {
                 .withClaim(_claimKey, jsonString)
                 .sign(ALGORITHM)
 
-        _currentToken = token
-        return  _currentToken
+        return token // Retorna o token diretamente, não precisa de _currentToken
     }
 
-    String getToken () {
-        String token = _request.getHeader('Authorization')?.replace('Bearer','')?.trim() ?: ''
-
-        _currentToken = token
-        return _currentToken
+    String getToken() {
+        GrailsWebRequest webRequest = RequestContextHolder.currentRequestAttributes()
+        def request = webRequest.request as HttpServletRequest // Cast explícito
+        String authHeader = request.getHeader('Authorization')
+        return authHeader?.replace('Bearer', '')?.trim() ?: ''
     }
 
-    def decodeToken() {
-        JsonSlurper json = new JsonSlurper()
-        String token = getToken()
-
-        if (!token) return [sucesso: false, token: token]
-
+    def decodeToken(String token) {
+        if (!token) return null
         try {
-            DecodedJWT jwt = JWT.require(ALGORITHM)
-                    .build()
-                    .verify(token)
-
+            DecodedJWT jwt = JWT.require(ALGORITHM).build().verify(token)
             Claim payload = jwt.getClaim(_claimKey)
-            return json.parseText(payload.asString())
+            return new JsonSlurper().parseText(payload.asString())
         } catch (Exception e) {
-            log.error("Tipo de Erro: ${e.class}, Mesage: ${e.message}")
+            log.error("Erro ao decodificar token: ${e.message}", e)
+            return null
         }
-
-        return [sucesso: true, token: token]
     }
 }

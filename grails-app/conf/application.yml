@@ -56,6 +56,34 @@ grails:
   plugin:
     console:
       enabled: false
+    springsecurity:
+      userLookup:
+        userDomainClassName: com.maspim.Usuario
+        authorityJoinClassName: com.maspim.UsuarioRole
+      authority:
+        className: com.maspim.Role
+      rest:
+        login:
+          endpointUrl: /api/login/auth
+          active: true
+        token:
+          validation:
+            enableAnonymousAccess: true
+            active: true
+          storage:
+            jwt:
+              secret: 'D83jF#kLmZQ92*!ab9vNcuuPpqRma8tF'
+              expiration: 1800000
+              useSignedJwt: true
+              useEncryptedJwt: false
+        filterChain:
+          chainMap:
+            - pattern: '/api/login/**'
+              filters: 'JOINED_FILTERS,-csrfFilter'
+            - pattern: '/api/**'
+              filters: 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-csrfFilter'
+            - pattern: '/**'
+              filters: 'JOINED_FILTERS'
 
 dataSource:
   driverClassName: org.h2.Driver
@@ -63,7 +91,7 @@ dataSource:
   password: ''
   pooled: true
   jmxExport: true
-  dbCreate: update  # Atualiza o banco conforme necessário
+  dbCreate: update
 
 quartz:
   autoStartup: true
@@ -82,7 +110,7 @@ environments:
   production:
     dataSource:
       dbCreate: none
-      url: jdbc:mysql://localhost:3306/prodDb  # Exemplo com MySQL
+      url: jdbc:mysql://localhost:3306/prodDb
       username: prodUser
       password: prodPassword
       properties:
@@ -110,3 +138,12 @@ hibernate:
   cache:
     queries: false
   dialect: org.hibernate.dialect.MySQLDialect  # Ajuste para produção com MySQL
+
+jwt:
+  secret: '1234567890abcdefghijklmnopq'
+  expiration: 1800000 # 30mili
+
+logging:
+  level:
+    grails.web.mapping: DEBUG
+    org.springframework.security: DEBUG

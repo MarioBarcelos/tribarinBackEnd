@@ -1,4 +1,4 @@
-package vendas
+package tribarin
 
 import grails.converters.JSON
 
