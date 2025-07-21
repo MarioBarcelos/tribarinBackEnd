@@ -28,17 +28,17 @@ class Usuario implements UserDetails {
 
     @Override
     boolean isAccountNonExpired() {
-        return true // ou lógica para validar se a conta está expirada
+        return true
     }
 
     @Override
     boolean isAccountNonLocked() {
-        return true // ou lógica para validar se a conta está bloqueada
+        return true
     }
 
     @Override
     boolean isCredentialsNonExpired() {
-        return true // ou lógica para validar se as credenciais expiraram
+        return true
     }
 
     @Override

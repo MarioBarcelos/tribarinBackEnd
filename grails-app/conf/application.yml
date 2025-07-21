@@ -5,6 +5,8 @@ info:
     grailsVersion: '@info.app.grailsVersion@'
 
 grails:
+  gorm:
+    logSql: true
   mime:
     disable:
       accept:
@@ -84,14 +86,21 @@ grails:
               filters: 'JOINED_FILTERS,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter,-csrfFilter'
             - pattern: '/**'
               filters: 'JOINED_FILTERS'
+      controllerAnnotations:
+        staticRules:
+          - pattern: '/api/login/auth'
+            access: ['permitAll']
+          - pattern: '/api/login/autenticar'
+            access: ['permitAll']
 
 dataSource:
-  driverClassName: org.h2.Driver
-  username: sa
-  password: ''
   pooled: true
   jmxExport: true
-  dbCreate: update
+  driverClassName: com.mysql.cj.jdbc.Driver
+  dialect: org.hibernate.dialect.MySQL8Dialect
+  username: admin
+  password: admin
+  url: jdbc:mysql://localhost:3306/tribarin?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 
 quartz:
   autoStartup: true
@@ -100,12 +109,10 @@ environments:
   development:
     dataSource:
       dbCreate: update
-      url: jdbc:h2:mem:devDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 
   test:
     dataSource:
       dbCreate: update
-      url: jdbc:h2:mem:testDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
 
   production:
     dataSource:
@@ -137,7 +144,7 @@ environments:
 hibernate:
   cache:
     queries: false
-  dialect: org.hibernate.dialect.MySQLDialect  # Ajuste para produção com MySQL
+  dialect: org.hibernate.dialect.MySQLDialect
 
 jwt:
   secret: '1234567890abcdefghijklmnopq'
@@ -145,5 +152,7 @@ jwt:
 
 logging:
   level:
-    grails.web.mapping: DEBUG
-    org.springframework.security: DEBUG
+    #grails.web.mapping: DEBUG
+    #org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE

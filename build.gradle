@@ -61,13 +61,14 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-validation"
     implementation "org.grails.plugins:spring-security-core:5.1.1"
     implementation "io.jsonwebtoken:jjwt-api:0.11.5"
+    implementation 'com.auth0:java-jwt:4.4.0'
+    implementation 'org.slf4j:slf4j-api:1.7.30'
     runtimeOnly "io.jsonwebtoken:jjwt-impl:0.11.5"
     runtimeOnly "io.jsonwebtoken:jjwt-jackson:0.11.5" // Usa Jackson para JSON
-    implementation 'com.auth0:java-jwt:4.4.0'
     compileOnly "io.micronaut:micronaut-inject-groovy"
     console "org.grails:grails-console"
 
-    runtimeOnly 'ch.qos.logback:logback-classic:1.2.11'
+    runtimeOnly 'ch.qos.logback:logback-classic:1.2.3'
     runtimeOnly "com.bertramlabs.plugins:asset-pipeline-grails:4.5.1"
     runtimeOnly "mysql:mysql-connector-java"
     runtimeOnly "org.apache.tomcat:tomcat-jdbc"

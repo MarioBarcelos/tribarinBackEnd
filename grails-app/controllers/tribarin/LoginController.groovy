@@ -6,22 +6,27 @@ import grails.converters.JSON
 import org.springframework.http.HttpStatus
 
 class LoginController {
-    static namespace = "api/login"
+    static namespace = "api"
+    static responseFormats = ['json', 'html']
     JWTService jwtService
 
-    def auth = {
-        def bodyRequest = request.JSON
+    def autenticar() {
+        try {
+            def bodyRequest = request.JSON ?: params
+            log.info("bodyRequest: ${bodyRequest}")
 
-        if (!bodyRequest?.username) {
-            response.status = HttpStatus.BAD_REQUEST.value()
-            render ([sucesso: false, mensagem: 'Username Inválido!'] as JSON)
-            return
-        }
-        if (!bodyRequest?.password) {
-            response.status = HttpStatus.BAD_REQUEST.value()
-            render ([sucesso: false, mensagem: 'Senha Inválida!'] as JSON)
-            return
-        }
+            if (!bodyRequest?.username) {
+                log.info("Username inválido")
+                response.status = HttpStatus.BAD_REQUEST.value()
+                render([sucesso: false, mensagem: 'Username Inválido!'] as JSON)
+                return
+            }
+            if (!bodyRequest?.password) {
+                log.info("Senha inválida")
+                response.status = HttpStatus.BAD_REQUEST.value()
+                render([sucesso: false, mensagem: 'Senha Inválida!'] as JSON)
+                return
+            }
 
         Usuario usuario = Usuario.findByUsername("${bodyRequest?.username}")
         if (!usuario || !usuario?.password?.equals("${bodyRequest?.password}")) {
@@ -30,14 +35,20 @@ class LoginController {
             return
         }
 
-        Map payLoadToken = [
-                id: usuario?.id,
-                username: usuario?.username,
-                role: usuario?.role
-        ]
+            Map payLoadToken = [
+                    id: usuario?.id,
+                    username: usuario?.username,
+                    role: usuario?.role
+            ]
 
-        String token = jwtService.generateToken(payLoadToken)
+            String token = jwtService.generateToken(payLoadToken)
+            log.info("Token gerado com sucesso")
 
-        render ([token: token, expiracao: System.currentTimeMillis() + jwtService.JWT_EXPIRATION] as JSON)
+            render([token: token, expiracao: System.currentTimeMillis() + jwtService.JWT_EXPIRATION] as JSON)
+        } catch (Exception e) {
+            log.error("Erro no auth: ${e.message}", e)
+            response.status = HttpStatus.INTERNAL_SERVER_ERROR.value()
+            render([sucesso: false, mensagem: 'Erro interno', erro: e.message] as JSON)
+        }
     }
 }
