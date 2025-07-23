@@ -5,6 +5,7 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import com.auth0.jwt.interfaces.Claim
 import com.auth0.jwt.interfaces.DecodedJWT
+import grails.plugin.springsecurity.SpringSecurityService
 import grails.util.Holders
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
@@ -19,13 +20,12 @@ import org.springframework.web.context.request.RequestContextHolder
 @Service
 class JWTService {
 
-    private Algorithm ALGORITHM
-    long JWT_EXPIRATION // Removido 'private' pois é acessado externamente
-    private String _claimKey
-    // Removido _currentToken, _request, _response pois são acessados via RequestContextHolder
-    // ou são variáveis de escopo da requisição/método.
+    def springSecurityService = new SpringSecurityService()
 
-    JWTService() { // Construtor sem parâmetros para facilitar a injeção do Spring
+    private Algorithm ALGORITHM
+    long JWT_EXPIRATION
+    private String _claimKey
+    JWTService() {
         _claimKey = 'principal'
         JWT_EXPIRATION = Holders.config.getProperty('jwt.expiration', Long, 1800000L)
         ALGORITHM = Algorithm.HMAC256("${Holders.config.getProperty('jwt.secret')}")
@@ -43,12 +43,12 @@ class JWTService {
                 .withClaim(_claimKey, jsonString)
                 .sign(ALGORITHM)
 
-        return token // Retorna o token diretamente, não precisa de _currentToken
+        return token
     }
 
     String getToken() {
         GrailsWebRequest webRequest = RequestContextHolder.currentRequestAttributes()
-        def request = webRequest.request as HttpServletRequest // Cast explícito
+        def request = webRequest.request as HttpServletRequest
         String authHeader = request.getHeader('Authorization')
         return authHeader?.replace('Bearer', '')?.trim() ?: ''
     }
