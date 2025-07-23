@@ -5,6 +5,7 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
 import com.auth0.jwt.interfaces.Claim
 import com.auth0.jwt.interfaces.DecodedJWT
+import grails.plugin.springsecurity.SpringSecurityService
 import grails.util.Holders
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
@@ -19,7 +20,7 @@ import org.springframework.web.context.request.RequestContextHolder
 @Service
 class JWTService {
 
-    def springSecurityService = new SpringSecurityService()
+    SpringSecurityService springSecurityService
 
     private Algorithm ALGORITHM
     long JWT_EXPIRATION
