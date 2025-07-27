@@ -108,15 +108,15 @@ quartz:
 environments:
   development:
     dataSource:
-      dbCreate: update
+      dbCreate: update # JAMAIS UTILIZAR create-drop
 
   test:
     dataSource:
-      dbCreate: update
+      dbCreate: update # JAMAIS UTILIZAR create-drop
 
   production:
     dataSource:
-      dbCreate: none
+      dbCreate: none # JAMAIS UTILIZAR create-drop
       url: jdbc:mysql://localhost:3306/prodDb
       username: prodUser
       password: prodPassword
@@ -144,15 +144,17 @@ environments:
 hibernate:
   cache:
     queries: false
-  dialect: org.hibernate.dialect.MySQLDialect
+  #dialect: org.hibernate.dialect.MySQLDialect
+  hbm2ddl:
+    auto: update
 
 jwt:
   secret: '1234567890abcdefghijklmnopq'
   expiration: 1800000 # 30mili
 
-logging:
-  level:
+#logging:
+  #level:
     #grails.web.mapping: DEBUG
     #org.springframework.security: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    #org.hibernate.SQL: DEBUG
+    #org.hibernate.type.descriptor.sql.BasicBinder: TRACE

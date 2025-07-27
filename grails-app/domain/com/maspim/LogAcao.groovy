@@ -1,6 +1,7 @@
 package com.maspim
 
 class LogAcao {
+    String id
 
     String verboUtilizado
     String rotaAcessada
@@ -9,15 +10,17 @@ class LogAcao {
     Date dtLog
 
     static mapping = {
+        id generator: 'assigned'
         request type: 'text'
         response type: 'text'
     }
 
     static constraints = {
-        verboUtilizado blank: false, nullable: true, maxSize: 256
-        rotaAcessada blank: false, nullable: true, maxSize: 65535
-        request blank: false, nullable: true, maxSize: 65535
-        response blank: false, nullable: true, maxSize: 65535
-        dtLog blank: false, nullable: true
+        id unique: true
+        verboUtilizado nullable: true, maxSize: 256
+        rotaAcessada nullable: true, maxSize: 15535
+        request nullable: true, maxSize: 15535
+        response nullable: true, maxSize: 15535
+        dtLog nullable: true
     }
 }

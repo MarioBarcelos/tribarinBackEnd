@@ -4,26 +4,27 @@ import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
 class Usuario implements UserDetails {
-
+    String id
     String username
     String password
-    boolean enabled = true
-
-    static hasMany = [authorities: Role]
+    String cpf
+    boolean enabled
 
     static constraints = {
+        id unique: true
         username blank: false, unique: true
         password blank: false
+        cpf blank: false, unique: true
     }
 
     static mapping = {
         password column: '`password`'
+        id generator: 'assigned'
     }
 
-    // Implementações necessárias do UserDetails
     @Override
     Collection<? extends GrantedAuthority> getAuthorities() {
-        return authorities
+        UsuarioRole.findAllByUsuario(this).collect { it.role } as Set
     }
 
     @Override

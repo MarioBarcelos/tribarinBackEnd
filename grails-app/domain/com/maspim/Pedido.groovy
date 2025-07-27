@@ -1,7 +1,7 @@
 package com.maspim
 
 class Pedido {
-
+    String id
     String numero
     int valor
     Date dtCompra
@@ -13,7 +13,9 @@ class Pedido {
     Pagamento pagamento
     Usuario usuario
 
+    static mapping = {id generator: 'assigned'}
     static constraints = {
+        id unique: true
         numero blank: false, nullable: true
         valor blank: false, nullable: true, maxSize: 256
         dtCompra blank: false, nullable: true
