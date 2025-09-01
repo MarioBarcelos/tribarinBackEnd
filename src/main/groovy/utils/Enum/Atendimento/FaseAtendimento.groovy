@@ -1,4 +1,4 @@
-package utils
+package utils.Enum.Atendimento
 
 enum FaseAtendimento {
 

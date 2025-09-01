@@ -15,8 +15,10 @@ apply plugin: "org.grails.grails-gsp"
 group = "com.maspim"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core/" }
+    gradlePluginPortal()
 }
 
 configurations {
@@ -34,7 +36,6 @@ ext {
 }
 
 dependencies {
-    profile "org.grails.profiles:web"
     developmentOnly "org.springframework.boot:spring-boot-devtools"
     implementation "io.github.virtualdogbert:logback-groovy-config:1.12.4"
     implementation "org.grails:grails-core"

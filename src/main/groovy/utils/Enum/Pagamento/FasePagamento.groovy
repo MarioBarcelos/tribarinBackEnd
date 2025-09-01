@@ -1,4 +1,4 @@
-package utils.Enum.Atendimento.Pagamento
+package utils.Enum.Pagamento
 
 enum FasePagamento {
 

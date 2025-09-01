@@ -14,7 +14,11 @@ import javax.servlet.http.HttpServletResponse
 @Component
 class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-    JWTService jwtService
+    private final JWTService jwtService
+
+    JwtAuthenticationFilter(JWTService jwtService) {
+        this.jwtService = jwtService
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) {

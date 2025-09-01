@@ -20,7 +20,6 @@ import org.grails.web.servlet.mvc.GrailsWebRequest
 import org.springframework.web.context.request.RequestContextHolder
 
 @Transactional
-@Service
 class JWTService {
 
     SpringSecurityService springSecurityService
@@ -45,6 +44,18 @@ class JWTService {
                 .withClaim(_claimKey, jsonString)
                 .sign(ALGORITHM)
         return token
+    }
+
+    String gerarRefreshToken(Map payLoad) {
+        Date now = new Date()
+        Date expirationDate = new Date(now.time + 1000 * 60 * 60 * 24 * 1)
+        String jsonString = new JsonBuilder(payLoad).toString()
+        return JWT.create()
+                .withSubject(payLoad.username as String ?: '')
+                .withIssuedAt(now)
+                .withExpiresAt(expirationDate)
+                .withClaim(_claimKey, jsonString)
+                .sign(ALGORITHM)
     }
 
     String getToken() {
